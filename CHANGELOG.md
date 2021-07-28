@@ -1,3 +1,15 @@
+# v0.2.0 (Wed Jul 28 2021)
+
+#### 🚀 Enhancement
+
+- Create avater list component [#2](https://github.com/erickTrettel/learnstorybook-design-system/pull/2) ([@erickTrettel](https://github.com/erickTrettel))
+
+#### Authors: 1
+
+- Erick Trettel de Almeida ([@erickTrettel](https://github.com/erickTrettel))
+
+---
+
 # v0.1.3 (Wed Jul 28 2021)
 
 #### ⚠️ Pushed to `master`
