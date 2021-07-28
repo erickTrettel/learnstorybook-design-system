@@ -1,7 +1,7 @@
 {
-  "name": "learnstorybook-design-system-template",
+  "name": "@erick_trettel/learnstorybook-design-system-template",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env BABEL_ENV=production babel src -d dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
@@ -39,7 +39,16 @@
       }
     ]
   },
-  "babel": {},
+  "babel": {
+    "presets": [
+      [
+        "react-app",
+        {
+          "absoluteRuntime": false
+        }
+      ]
+    ]
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -53,6 +62,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.14.8",
     "@storybook/addon-a11y": "^6.3.6",
     "@storybook/addon-actions": "^6.3.6",
     "@storybook/addon-essentials": "^6.3.6",
@@ -60,7 +70,14 @@
     "@storybook/node-logger": "^6.3.6",
     "@storybook/preset-create-react-app": "^3.2.0",
     "@storybook/react": "^6.3.6",
+    "auto": "^10.30.0",
     "chromatic": "^5.10.0-canary.0",
+    "cross-env": "^7.0.3",
     "prettier": "^2.3.2"
-  }
+  },
+  "description": "Learning how to build a design system with storybook",
+  "main": "dist/index.js",
+  "repository": "https://github.com/erickTrettel/learnstorybook-design-system",
+  "author": "Erick Trettel <ericktrettel@gmail.com>",
+  "license": "MIT"
 }
